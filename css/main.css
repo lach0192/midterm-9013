@@ -1,0 +1,498 @@
+/*
+MAD9013 Midterm
+Eric Lachapelle
+File: main.css
+*/
+
+/**************************************************
+Fonts
+Droid Serif
+Droid Sans
+Droid Sans Mono
+Lato
+Merriweather
+Helvetica
+
+Font Scaling
+6.854rem
+4.236rem
+2.618rem
+2.0rem
+1.618rem
+1.0rem
+0.618rem
+
+Colour scheme
+
+**************************************************/
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+h1{
+    font: bold 4.236rem 'Merriweather', 'Droid Serif', 'Georgia', serif;
+}
+h2{
+    font: bold 2.618rem 'Merriweather', 'Droid Serif', 'Georgia', serif;
+    text-shadow: 2px 4px 7px #000;
+}
+li, p, a{
+    font: bold 1.618rem 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+    color: #ddd;
+}
+pre, code, kbd{
+    font: normal 1.0rem 'Droid Sans Mono', 'Lato', 'Helvetica', 
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #333;
+    color: #ccc;
+}
+header{
+    width: 100%;
+    background-image: url("https://placeimg.com/1200/480/nature");
+}
+header h1{
+    font-size: 2.0rem;
+    color: #eee;
+    text-shadow: 3px 5px 8px #000;
+    text-align: center;
+}
+.main h2{
+    font-size: 1.618rem;
+    padding: 5px 0 5px 0px;
+}
+nav{
+    width: 100%;
+}
+nav>ul{
+    width: 100%;
+}
+nav li{
+    width: 100%;
+    list-style: none;
+    border-bottom: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+}
+nav a,
+nav a:link,
+nav a:visited{
+    display: block;
+    font: bold 1.618rem 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.6s ease 0s;
+    
+}
+nav a:active,
+nav a:focus,
+nav a:hover{
+    color: #aaa;
+    text-shadow: 2px 4px 7px #000;
+}
+main{
+    width: 100%;
+}
+.col{
+    float: none;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.col img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+/*    background-color: azure;*/
+}
+.col p{
+    line-height: 1.5;
+    padding-bottom: 20px;
+    font-size: 1.0rem;
+/*
+    padding-left: 5px;
+    padding-right: 5px;
+*/
+}
+footer{
+    width: 100%;
+    text-align: center;
+    clear: both;
+
+}
+footer p{
+    font-size: 1.0rem;
+    
+}
+footer ul li{
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    padding: 10px 0 10px 0;
+    
+}
+footer a{
+    text-decoration: none;
+    font-size: 1.0rem;
+    transition: all 0.4s ease 0s;
+}
+footer a:hover{
+    color: #aaa;
+    text-shadow: 2px 4px 7px #000;
+}
+
+@media screen and (min-width:600px){
+    
+    .wrapper{
+        width: 100%;
+        margin: 0 auto;
+        border: 5px solid #ccc;
+    }
+    header{
+        width: 100%;
+        background-image: url("https://placeimg.com/1400/480/nature");
+        border-bottom: 5px solid #ccc;
+        padding: 20px 20px 20px 20px;
+    }
+    header h1{
+        color: #eee;
+        text-shadow: 3px 5px 8px #000;
+        font-size: 2.618rem;
+        text-align: left;
+    }
+    .main h2{
+        font-size: 1.618rem;
+        
+    }
+    nav{
+        width: 90%;
+        margin: 0 auto;
+/*        float: left;*/
+    }
+    nav>ul{
+        width: 100%;
+/*        display: inline-block;*/
+        float: left;
+    }
+    nav li{
+        width: 20%;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+        border-left: 0;
+/*        display: inline-block;*/
+        float: left;
+/*        position: relative;*/
+    }
+    nav li:first-child{
+        border-left: 2px solid #ccc;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+/*        display: block;*/
+        font: bold 1.618rem 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 0 20px 0;
+        
+    }
+    nav a:active,
+    nav a:focus,
+    nav a:hover{
+
+    }
+    main{
+        width: 90%;
+        float: left;
+    }
+    .col{
+        float: left;
+        width: 50%;
+    }
+    .col h2{
+        padding: 20px 0 20px 0;
+    }
+    .col p{
+        line-height: 1.5;
+        padding-bottom: 20px;
+        font-size: 1.0rem;
+    }
+    .first{
+        padding: 0 20px 0 40px;
+    }
+    .second{
+        padding-right: 20px;
+    }
+    .col img{
+        width: 60%;
+        height: auto;
+        max-width: 100%;
+/*        background-color: azure;*/
+        display: inline-block;
+        float:left;
+        padding-right: 20px;
+    }
+    footer{
+        width: 90%;
+        clear: both;
+        text-align: center;
+        border-top: 5px solid #ccc;
+        padding-bottom: 3px;
+        margin: 0 auto;
+    }
+    footer p{
+        padding: 20px 0 20px 0;
+        font-size: 1.0rem;
+    }
+    footer ul{
+        width: 100%;
+        border-top: 2px solid #ccc;
+    }
+    footer ul li{
+        list-style: none;
+        display: inline-block;
+        width: 33%;
+        padding: 10px 0 10px 0;
+    }
+    footer a{
+        text-decoration: none;
+        font-size: 1.0rem;
+    }
+}
+@media screen and (min-width: 800px){
+    
+    .wrapper{
+        width: 95%;
+        margin: 0 auto;
+        border: 5px solid #777;
+    }
+    header{
+        width: 100%;
+        background-image: url("https://placeimg.com/1400/480/nature");
+        border-bottom: 5px solid #ccc;
+        padding: 20px 20px 20px 20px;
+    }
+    header h1{
+        color: #eee;
+        text-shadow: 3px 5px 8px #000;
+        font-size: 4.236rem;
+    }
+    .main h2{
+        font-size: 2.0rem;
+    }
+    nav{
+        width: 90%;
+        float: left;
+    }
+    nav>ul{
+        width: 100%;
+/*        display: inline-block;*/
+        float: left;
+    }
+    nav li{
+        width: 20%;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+/*        display: inline-block;*/
+        float: left;
+/*        position: relative;*/
+    }
+    nav li:first-child{
+        border-left: 0;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+/*        display: block;*/
+        font: bold 2.0rem 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 0 20px 0;
+        
+    }
+    nav a:active,
+    nav a:focus,
+    nav a:hover{
+
+    }
+    main{
+        width: 90%;
+        float: left;
+    }
+    .col{
+        float: left;
+        width: 50%;
+    }
+    .col h2{
+        padding: 20px 0 20px 0;
+    }
+    .col p{
+        line-height: 1.5;
+        padding-bottom: 20px;
+        font-size: 1.618rem;
+    }
+    .first{
+        padding: 0 20px 0 40px;
+    }
+    .second{
+        padding-right: 20px;
+    }
+    .col img{
+        width: 50%;
+        height: auto;
+        max-width: 100%;
+/*        background-color: azure;*/
+        display: inline-block;
+        float:left;
+        padding-right: 20px;
+    }
+    footer{
+        width: 100%;
+        clear: both;
+        text-align: center;
+        border-top: 5px solid #ccc;
+        padding-bottom: 3px;
+    }
+    footer p{
+        padding: 20px 0 20px 0;
+        font-size: 1.618rem;
+    }
+    footer ul{
+        width: 100%;
+        border-top: 2px solid #ccc;
+    }
+    footer ul li{
+        list-style: none;
+        display: inline-block;
+        width: 33%;
+        
+        padding: 10px 0 10px 0;
+    }
+    footer a{
+        text-decoration: none;
+        font-size: 1.618rem;
+    }
+}
+@media screen and (min-width: 1200px){
+    
+    .wrapper{
+        width: 95%;
+        margin: 0 auto;
+        border: 5px solid #ccc;
+    }
+    header{
+        width: 100%;
+        background-image: url("https://placeimg.com/1400/480/nature");
+        border-bottom: 5px solid #ccc;
+        padding: 20px 20px 20px 20px;
+    }
+    header h1{
+        color: #eee;
+        text-shadow: 3px 5px 8px #000;
+        font-size: 4.236rem;
+    }
+    .main h2{
+        font-size: 2.618rem;
+    }
+    nav{
+        width: 30%;
+        float: left;
+    }
+    nav>ul{
+        width: 100%;
+    }
+    nav li{
+        width: 100%;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+        display: block;
+        font: bold 2.618rem 'Lato', 'Droid Sans', 'Helvetica', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 0 20px 0;
+        
+    }
+    nav a:active,
+    nav a:focus,
+    nav a:hover{
+
+    }
+    main{
+        width: 70%;
+        float: left;
+    }
+    .col{
+        float: left;
+        width: 50%;
+    }
+    .col h2{
+        padding: 20px 0 20px 0;
+    }
+    .col p{
+        line-height: 1.5;
+        padding-bottom: 20px;
+    }
+    .first{
+        padding: 0 20px 0 40px;
+    }
+    .second{
+        padding-right: 20px;
+    }
+    .col img{
+        width: 55%;
+        height: auto;
+        max-width: 100%;
+/*        background-color: azure;*/
+        display: inline-block;
+        float:left;
+        padding-right: 20px;
+    }
+    footer{
+        width: 100%;
+        clear: both;
+        text-align: center;
+        border-top: 5px solid #ccc;
+        padding-bottom: 3px;
+    }
+    footer p{
+        padding: 20px 0 20px 0;
+    }
+    footer ul{
+        width: 100%;
+        border-top: 2px solid #ccc;
+    }
+    footer ul li{
+        list-style: none;
+        display: inline-block;
+        width: 33%;
+        
+        padding: 10px 0 10px 0;
+    }
+    footer a{
+        text-decoration: none;
+        
+    }
+}
